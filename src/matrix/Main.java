@@ -9,8 +9,10 @@ public class Main {
 		SquareMatrix A = new SquareMatrix(a);
 		SquareMatrix B = new SquareMatrix(b);
 		SquareMatrix C = A.add(B);
+		SquareMatrix D = new SquareMatrix(3, 3);
 
-		System.out.println(C.toString());
+		System.out.println(C);
+		System.out.println(D);
 	}
 
 }
