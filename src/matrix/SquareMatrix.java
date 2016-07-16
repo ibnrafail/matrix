@@ -25,6 +25,10 @@ public class SquareMatrix {
 		matrix = new double[numOfRows][numOfColumns];
 		this.resetMatrix();
 	}
+	public SquareMatrix(int dimension)
+	{
+		this(dimension, dimension);
+	}
 	/**
 	 * Constructor that takes an array as Matrix initializer.
 	 * @param data 2d array for Matrix object initialization.
@@ -160,7 +164,7 @@ public class SquareMatrix {
 		return true;
 	}
 	/**
-	 * 
+	 * Returns a string representation of SquareMatrix. 
 	 */
 	public String toString()
 	{
@@ -178,5 +182,14 @@ public class SquareMatrix {
 			matrix += "\n";
 		}
 		return matrix;
+	}
+	public static SquareMatrix generateIdentity(int dimension)
+	{
+		SquareMatrix C = new SquareMatrix(dimension);
+		for (int idx = 0; idx < dimension; idx++)
+		{
+			C.matrix[idx][idx] = 1;
+		}
+		return C;
 	}
 }
